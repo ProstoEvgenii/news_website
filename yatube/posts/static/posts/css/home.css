@@ -1,0 +1,20 @@
+.features {
+    color: #eb5959;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.post-container {
+    margin: 0 auto;
+    max-width: 1500px; /* задаем максимальную ширину контейнера */
+    padding: 0 20px; /* задаем отступы слева и справа */
+
+}
+
+.blog-post {
+    width: 30%;
+    margin: 10 px;
+    display: inline-block;
+    vertical-align: top;
+}

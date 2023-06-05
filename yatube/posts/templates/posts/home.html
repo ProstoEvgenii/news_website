@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'posts/css/home.css' %}">
+<div class="features">
+<h1>Последние обновления на сайте</h1>
+</div>
+<div class="post-container">
+{% for post in posts %}
+<div class="blog-post">
+    <h2 class="blog-post-title">{{ post.title }}</h2>
+    <p class="blog-post-meta">{{ post.pub_date|date:"d M Y" }} by <a href="#">{{ post.author.get_full_name }}</a></p>
+    <hr>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}
+
+
+<div class="post">
+    <h3>
+        Автор: {{ post.author.get_full_name }}, дата публикации: {{ post.pub_date|date:"d M Y" }}
+    </h3>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
